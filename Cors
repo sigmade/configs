@@ -15,3 +15,7 @@ app.UseCors();
 [EnableCors("Only5000")]
 [Authorize]
 [HttpGet("user-items/pagination/{pageIndex}/{pageSize}")]
+
+
+https://metanit.com/sharp/aspnet5/31.3.php
+https://docs.microsoft.com/en-us/aspnet/core/security/cors?view=aspnetcore-5.0#options
