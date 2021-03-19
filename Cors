@@ -1,0 +1,17 @@
+// самым первым в ConfigureServices
+services.AddCors(options =>
+            {
+                options.AddPolicy("Only5000", builder => builder
+                    .AllowAnyHeader()
+                    .WithOrigins("http://localhost:5000")
+                    );
+            });
+
+//Configure
+
+app.UseCors();
+
+
+[EnableCors("Only5000")]
+[Authorize]
+[HttpGet("user-items/pagination/{pageIndex}/{pageSize}")]
